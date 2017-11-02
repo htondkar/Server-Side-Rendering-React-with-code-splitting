@@ -1,0 +1,19 @@
+<!-- htmlWebpackPlugin: { files: { chunks: { main: { entry } } } } -->
+doctype html
+html(lang="en")
+  head
+    title React server side rendering
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href=htmlWebpackPlugin.files.css[0])
+
+  body
+    #root
+      | {markup}
+    | {redux}
+    | {bundles}
+    script(src=htmlWebpackPlugin.files.chunks.main.entry)
+    | {runner}
+  </body>
+
+</html>
